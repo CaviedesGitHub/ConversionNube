@@ -7,4 +7,8 @@ def create_app(config_name):
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
     app.config['JWT_SECRET_KEY'] = 'cloud2022'
     app.config["JWT_ACCESS_TOKEN_EXPIRES"] = False
+    UPLOAD_FOLDER = 'C:/java'
+    ALLOWED_EXTENSIONS = {'txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif', 'mp3', 'wav', 'wma', 'acc', 'ogg'}
+    app.config['UPLOAD_FOLDER']=UPLOAD_FOLDER
+    app.config['ALLOWED_EXTENSIONS']=ALLOWED_EXTENSIONS
     return app
